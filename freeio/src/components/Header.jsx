@@ -10,8 +10,8 @@ const navigation = [
 
 function Header() {
   return (
-    <div className=" container mx-auto  mt-8">
-      <div className="">
+    <div className="container mx-auto mt-8">
+      <div className="px-5">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <div className="flex-shrink-0">
@@ -21,7 +21,7 @@ function Header() {
                 alt="Your Company"
               />
             </div>
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 {navigation.map((item) => (
                   <Link
@@ -42,7 +42,7 @@ function Header() {
             </div>
           </div>
           <div className="btn-group">
-            <Link className="inline-block px-4 py-2 text-base font-medium text-grey-100 hover:text-emerald-500">
+            <Link className="hidden md:inline-block px-4 py-2 text-base font-medium text-grey-100 hover:text-emerald-500">
               Become Seller
             </Link>
             <Link className="inline-block px-4 py-2 text-base font-medium text-grey-200 hover:text-emerald-500">
