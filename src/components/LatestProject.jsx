@@ -14,9 +14,8 @@ function LatestProject() {
   
   return (
     <>
-      <div className="">
-        <div className="container mx-auto pb-24 px-5 pt-24 ">
-          <div className="block lg:flex lg:justify-between pb-12">
+        <div className="container mx-auto pt-16 pb-8 lg:py-20 px-5">
+          <div className="block lg:flex lg:justify-between">
             <div>
               <h2 className="text-2xl lg:text-3xl font-bold">
               Latest Projects
@@ -26,7 +25,7 @@ function LatestProject() {
               </p>
             </div>
             <div className="">
-              <Link className="flex items-center">
+              <Link to="/projects" className="flex items-center">
                 <h3 className="text-neutral-600 font-semibold">Browse All</h3>
                 <FontAwesomeIcon
                   icon={faArrowRightLong}
@@ -36,9 +35,10 @@ function LatestProject() {
             </div>
           </div>
           <div className="">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 ">
+            <div className="mx-auto overflow-x-auto pt-10 pb-10 lg:pb-0 gap-5 lg:overflow-hidden flex lg:grid lg:grid-cols-2 lg:gap-10 ">
               {latestProject.map((latest) => (
-                <div className="border rounded-md px-6 py-8 flex justify-between hover:shadow" key={latest.id}>
+                <div className="border rounded-md px-6 py-8 flex justify-between hover:shadow w-[350px] lg:w-full" key={latest.id}>
+                  <Link to={`/projects/${latest.id}`}>
                   <div className="flex gap-5 lg:gap-10">
                     <div>
                       <img
@@ -49,9 +49,9 @@ function LatestProject() {
                     </div>
                     <div>
                       <div>
-                        <Link className="text-lg font-semibold leading-normal text-neutral-800 group-hover/link:text-emerald-500 group-hover/link:underline">
+                        <h2 className="text-lg font-semibold leading-normal text-neutral-800 group-hover/link:text-emerald-500 group-hover/link:underline">
                           {latest.title}
-                        </Link>
+                        </h2>
                         <h3 className="text-emerald-500">{latest.subTitle}</h3>
                       </div>
                       <div className="flex gap-10 pt-3">
@@ -79,6 +79,8 @@ function LatestProject() {
                       </div>
                     </div>
                   </div>
+                  </Link>
+                  
                   <div className="group relative h-10">
                     <div className="px-3 py-2 bg-white rounded-full shadow-md hover:bg-emerald-500 hover:text-white">
                       <FontAwesomeIcon icon={faHeart} className="group" />
@@ -97,7 +99,6 @@ function LatestProject() {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 }

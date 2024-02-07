@@ -6,7 +6,7 @@ function Marketplace() {
   return (
     <div className="container mx-auto px-5 pt-24 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-10 xl:gap-20">
       <div>
-        <img src="/src/assets/img/h41.png" alt="Marketplace" />
+        <img src="/assets/img/h41.png" alt="Marketplace" />
       </div>
       <div className="lg:pr-0 xl:pr-52">
         <h2 className="text-3xl font-bold leading-10">
@@ -33,7 +33,7 @@ function Marketplace() {
           </li>
         </ul>
         <Link
-          to=""
+          to="/projects"
           className="inline-block px-6 py-3 text-base font-medium text-emerald-500 border-solid border-2 border-emerald-500 rounded mt-5 hover:bg-emerald-500 hover:text-white "
         >
           Find Talent

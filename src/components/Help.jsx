@@ -1,9 +1,9 @@
 import React from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-
+import { membership } from "./data";
 import {
-  faArrowRightLong,
   faLaptopCode,
   faPenRuler,
   faPenToSquare,
@@ -72,32 +72,17 @@ const categories = [
     subTitle: "Team Works , Collaboration Meet for Your Business.",
   },
 ];
-function Talent() {
+function Help() {
   return (
-    <>
-      <div className="container mx-auto pb-10 lg:pb-16 px-5">
-        <div className="block lg:flex lg:justify-between pb-12">
-          <div>
-            <h2 className="text-2xl lg:text-3xl font-bold">
-              Browse talent by category​
-            </h2>
-            <p className="text-base font-normal leading-8 text-gray-600 pt-1">
-              Get some Inspirations from 1800+ skills
-            </p>
-          </div>
-          <div >
-            <Link to="/products" className="flex items-center">
-              <h3 className="text-neutral-600 font-semibold">
-                All Categories{" "}
-              </h3>
-              <FontAwesomeIcon
-                icon={faArrowRightLong}
-                className="text-neutral-600 font-semibold pl-2"
-              />
-            </Link>
-          </div>
+    <div className="container mx-auto px-5">
+      <div className="py-10">
+        <div>
+          <h2 className="text-2xl lg:text-3xl font-bold text-center">How can we help you?</h2>
+          <p className="text-base font-normal leading-8 text-gray-600 pt-1 text-center">
+            Give your visitor a smooth online experience with a solid UX design
+          </p>
         </div>
-        <div className="">
+        <div className="pt-14">
           <div className=" mx-auto overflow-x-auto pb-10 lg:pb-0 gap-5 lg:overflow-hidden flex lg:grid lg:grid-cols-4 lg:gap-8">
             {categories.map((categrie) => (
               <Link to="/products" key={categrie.id}>
@@ -121,8 +106,54 @@ function Talent() {
           </div>
         </div>
       </div>
-    </>
+
+      <div className="p-16">
+          <div className="flex flex-col items-center mt-10 xl:mt-0">
+            <h3 className="text-3xl font-bold leading-10">Membership Plans</h3>
+            <p className="leading-7">
+              Lorem ipsum dolor sit amet, consectetur.
+            </p>
+          </div>
+          <div className="overflow-x-auto lg:overflow-hidden flex pb-10 lg:grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 xl:gap-7 mt-12 ">
+            {membership.map((member) => (
+              <div
+                key={member.priceing}
+                className="p-3 xl:p-12 rounded-lg border"
+              >
+                <div className="w-[320px] lg:w-full">
+                  <div className="text-center">
+                    <h4 className="font-bold text-3xl">{member.priceing}</h4>
+                    <h5 className="font-semibold text-lg py-2 text-neutral-700">
+                      {member.plan}
+                    </h5>
+                    <p className="text-neutral-600">{member.desc}</p>
+                  </div>
+                  <div className="text-center pt-6 xl:py-10">
+                    <ul className="text-neutral-600">
+                      <li>{member.list}</li>
+                      <li className="py-2">{member.day}</li>
+                      <li>{member.search}</li>
+                      <li className="py-2">{member.revision}</li>
+                      <li>{member.delivery}</li>
+                      <li className="py-2">{member.support}</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <Link
+                    to="#"
+                    className="inline-block w-full text-center px-7 py-2 text-lg font-medium text-emerald-500 border-solid border-2 border-emerald-500 rounded-lg mt-6 hover:bg-emerald-500 hover:text-white "
+                  >
+                    Add to cart
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+    </div>
   );
 }
 
-export default Talent;
+export default Help;

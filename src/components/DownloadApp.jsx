@@ -50,7 +50,7 @@ function DownloadApp() {
               </div>
             </div>
             <div>
-              <img src="/src/assets/img/h42.png" alt="download-img" />
+              <img src="/assets/img/h42.png" alt="download-img" />
             </div>
           </div>
         </div>

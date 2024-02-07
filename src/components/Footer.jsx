@@ -28,15 +28,15 @@ function Footer() {
             <div className="pt-10">
               <h3 className="text-xl font-medium text-neutral-700">About</h3>
               {trending.map((project) => (
-                <>
+                <div key={project.id}>
                   <ul className="pt-4">
-                    <li className="" key={project.id}>
+                    <li className="">
                       <Link className="font-medium text-sm text-neutral-500 hover:transition hover:duration-700 hover:text-emerald-500">
                         {project.name}
                       </Link>
                     </li>
                   </ul>
-                </>
+                </div>
               ))}
             </div>
             <div className="pt-10">
@@ -44,7 +44,7 @@ function Footer() {
                 Categories
               </h3>
               {projects.map((project) => (
-                <>
+                <div key={project.id}>
                   <ul className="pt-4">
                     <li className="" key={project.id}>
                       <Link className="font-medium text-sm text-neutral-500 hover:transition hover:duration-700 hover:text-emerald-500">
@@ -52,21 +52,21 @@ function Footer() {
                       </Link>
                     </li>
                   </ul>
-                </>
+                </div>
               ))}
             </div>
             <div className="pt-10">
               <h3 className="text-xl font-medium text-neutral-700">Support</h3>
               {support.map((project) => (
-                <>
+                <div key={project.id} >
                   <ul className="pt-4">
-                    <li className="" key={project.id}>
+                    <li className="" >
                       <Link className="font-medium text-sm text-neutral-500 hover:transition hover:duration-700 hover:text-emerald-500">
                         {project.name}
                       </Link>
                     </li>
                   </ul>
-                </>
+                </div>
               ))}
             </div>
             <div className="pt-10">
@@ -84,7 +84,7 @@ function Footer() {
                 <button className="absolute top-5 right-5">Send</button>
               </div>
               <div className="my-8">
-                <img src="/src/assets/img/logo-green.png" alt="footer-logo" />
+                <img src="/assets/img/logo-2.png" alt="footer-logo" className="w-7/12"/>
                 <p className="pt-2">
                   Everyone bringing the culture of sharing to service
                 </p>

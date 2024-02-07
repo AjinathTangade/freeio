@@ -6,7 +6,7 @@ function Testimonial() {
   return (
     <>
       <div className="bg-[#F0EFEC]">
-        <div className="container mx-auto pb-24 px-5 pt-24 ">
+        <div className="container mx-auto py-16 md:py-20 px-5  ">
           <div className="block lg:flex lg:justify-between pb-12">
             <div>
               <h2 className="text-2xl lg:text-3xl font-bold">
@@ -17,11 +17,12 @@ function Testimonial() {
               </p>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="mx-auto overflow-x-auto pb-10 lg:pb-0 gap-5 lg:overflow-hidden flex lg:grid lg:grid-cols-3 gap-10">
             {Pestimonial.map((testimonial) => (
-              <div
-                className="bg-white px-10 py-8 rounded-2xl shadow-md"
-                key={testimonial.id}
+              <div key={testimonial.id}>
+                <div
+                className="bg-white px-10 py-8 rounded-2xl shadow-md w-[320px] lg:w-full"
+                
               >
                 <div className="border-b pb-4">
                   <h3 className="text-lg font-semibold leading-normal lg:leading-loose text-emerald-500">
@@ -48,11 +49,13 @@ function Testimonial() {
                   </div>
                 </div>
               </div>
+              </div>
+              
             ))}
           </div>
           <div className="grid grid-cols-3 gap-5 lg:gap-10 ">
             {rate.map((rate) => (
-              <div className="lg:px-8 pt-16" key={rate.id}>
+              <div className="lg:px-8 pt-10" key={rate.id}>
                 <h2 className="font-bold text-2xl lg:text-3xl pb-2">{rate.count}</h2>
                 <h5 className="text-neutral-800">{rate.text}</h5>
               </div>

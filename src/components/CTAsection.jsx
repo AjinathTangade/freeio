@@ -6,7 +6,7 @@ import { Innovative } from "./data";
 function CTAsection() {
   return (
     <>
-      <section className="overflow-hidden container px-5 mx-auto lg:h-[600px] sm:grid sm:grid-cols-2 sm:items-center ">
+      <section className="overflow-hidden container px-5 lg:py-14 xl:py-0 mx-auto xl:h-[600px] sm:grid sm:grid-cols-2 sm:items-center ">
         <div className="max-w-7xl mt-10">
           <div className="mx-auto max-w-xlltr:sm:text-left rtl:sm:text-right">
             <h2 className="hidden md:block text-2xl font-bold text-emerald-800 leading-[2rem] lg:leading-[3rem] lg:text-5xl md:text-2xl sm:text-2xl">
@@ -22,13 +22,13 @@ function CTAsection() {
             </p>
             <div className="mt-4 md:mt-8">
               <Link
-                to=""
+                to="/products"
                 className="inline-block px-6 py-3 text-base font-medium text-white bg-emerald-500 border-solid border-2 border-emerald-500 rounded mr-4 hover:bg-emerald-800 hover:text-white hover:border-emerald-800"
               >
                 Find Work
               </Link>
               <Link
-                to=""
+                to="/projects"
                 className="inline-block px-6 py-3 text-base font-medium text-emerald-500 border-solid border-2 border-emerald-500 rounded ml-4 hover:bg-emerald-500 hover:text-white "
               >
                 Find Talent
@@ -39,7 +39,7 @@ function CTAsection() {
         <div className="flex justify-end">
           <img
             alt="Violin"
-            src="/src/assets/img/cta-img.png"
+            src="/assets/img/cta-img.png"
             className="h-full w-full object-cover lg:h-4/5 lg:w-4/5 self-end"
           />
         </div>
@@ -50,13 +50,13 @@ function CTAsection() {
             <h2 className="text-center text-base font-normal leading-8 text-gray-600">
               Trusted by the world’s most innovative teams
             </h2>
-            <div className="mx-auto mt-10 pb-14 overflow-x-auto flex sm:overflow-x-auto lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            <div className="mx-auto mt-10 pb-10 lg:pb-14 overflow-x-auto flex gap-10 sm:overflow-x-auto lg:mx-0 lg:max-w-none lg:grid-cols-5">
               {Innovative.map((innova) => (
                 
                 <img
                   src={innova.img}
                   alt="innovative-image"
-                  className="col-span-2 max-h-12 w-full object-contain lg:col-span-1" key={innova.id}
+                  className="col-span-2 max-h-6 w-full object-contain lg:col-span-1 " key={innova.id}
                 />
               ))}
             </div>
